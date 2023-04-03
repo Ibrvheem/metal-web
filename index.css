@@ -404,21 +404,27 @@ footer p{
     .community .container h1{
         margin-bottom: 2rem !important;
     }
-    .footerSocial ul{
+    .footerMain{
         display: flex;
-        gap: 2rem;
+        flex-direction: column;
+    }
+    .footerMain ul{
+        display: block;
+    }
+    .footerMain ul li{
+        margin: 2rem 0rem;
     }
     .footerMain img{
         width: 100%;
     }
-    .footerMain ul{
-        margin-top: 2rem;
-        display: block;
-        width: 100%;
-        justify-content: space-between;
-        font-size: 1.5rem;
-    }
 
+    .copyright{
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 2rem;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
     
     
 
