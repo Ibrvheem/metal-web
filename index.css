@@ -94,8 +94,14 @@ h1{
 .heroImage, .communityImage, .blogSlider{
     width: 45%;
     height: 45rem;
+}
+.heroImage img, .communityImage img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
     border-radius: .8rem;
-    background-color: #D9C88D;
+
 }
 .heroBtns, .communityBtn, .blogBtn{
     display: flex;
@@ -279,48 +285,33 @@ h1{
 footer{
     border-top: 2px solid #D9C88D;
 }
+footer p{
+    font-size: 1.2rem;
+}
 .footerMain{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-.footerMain img{
-    width: 70rem;
+    justify-content: space-between;
 }
 .footerMain ul{
     display: flex;
-    width: 70rem;
-    justify-content: space-between;
-    font-size: 1.5rem;
+    gap: 3rem;
 }
 .footerMain ul li{
     list-style: none;
-}
-.footerSocial{
-    display: flex;
-    align-items: center;
-    padding:3rem 0rem ;
-}
-.footerSocial ul{
-    display: flex;
-    gap: 3rem;
-}
-.socialIcons ul{
-    display: flex;
-    gap: 3rem;
-}
-.socialIcons ul li{
-    list-style: none;
-}
-.footerSocial ul li{
-    list-style: none;
+    font-size: 1.2rem;
 }
 .copyright{
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: space-around;
+    margin-top: 3rem;
+}
+.copyright ul{
+    display: flex;
+    gap: 3rem;
+}
+.copyright ul li{
+    list-style: none;
 }
 
 
