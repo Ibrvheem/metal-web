@@ -135,29 +135,75 @@
             <div class="blogWriting">
                 <h2>What's New?</h2>
                 <p>Donec consequat est diam. Mauris cursus commodo bibendum. Aliquam nisl nisl, ultrices at iaculis ut, rhoncus et turpis. Phasellus nulla mi, venenatis ac egestas a, sagittis ut nisl.</p>
+                
                 <div class="blogBtn contained">
                     <a href="">Read More</a>
                 </div>
+            </div>
+            <div class="blogCards">
+                <div class="blogCard">
+                    <div class="briefDetails">
+                        <div class="label">
+                            <h5>Javascript</h5>
+                        </div>
+                        <div class="topic">
+                           <h4>One cluster - multiple providers</h4> 
+                        </div>
+                        <div class="author-date">
+                            <h6>By Sandra James</h6>
+                            <h6>Friday, 10/02/2023</h6>
+                        </div>
+                        <div class="description">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident nulla facilis, praesentium amet maxime blanditiis nesciunt vel iusto rem voluptatibus iste culpa repellat? Accusamus, qui.</p>
+                        </div>
+                        <div class="blogBtn outlined" style="    width: 100%;text-align: center;display: flex;justify-content: center;">
+                            Read More
+                        </div>
+                    </div>
+                </div>
+                <div class="blogCard">
+                    <div class="briefDetails">
+                        <div class="label">
+                            <h5>Javascript</h5>
+                        </div>
+                        <div class="topic">
+                           <h4>One cluster - multiple providers</h4> 
+                        </div>
+                        <div class="author-date">
+                            <h6>By Sandra James</h6>
+                            <h6>Friday, 10/02/2023</h6>
+                        </div>
+                        <div class="description">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident nulla facilis, praesentium amet maxime blanditiis nesciunt vel iusto rem voluptatibus iste culpa repellat? Accusamus, qui.</p>
+                        </div>
+                        <div class="blogBtn outlined" style="    width: 100%;text-align: center;display: flex;justify-content: center;">
+                            Read More
+                        </div>
+                    </div>
+                </div>
+                <div class="blogCard">
+                    <div class="briefDetails">
+                        <div class="label">
+                            <h5>Javascript</h5>
+                        </div>
+                        <div class="topic">
+                           <h4>One cluster - multiple providers</h4> 
+                        </div>
+                        <div class="author-date">
+                            <h6>By Sandra James</h6>
+                            <h6>Friday, 10/02/2023</h6>
+                        </div>
+                        <div class="description">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident nulla facilis, praesentium amet maxime blanditiis nesciunt vel iusto rem voluptatibus iste culpa repellat? Accusamus, qui.</p>
+                        </div>
+                        <div class="blogBtn outlined" style="    width: 100%;text-align: center;display: flex;justify-content: center;">
+                            Read More
+                        </div>
+                    </div>
+                </div>
 
             </div>
-            <div class="carouselContainer">
-                <div class="carouselSlide">
-                  <img src="image1.jpg" alt="Image 1">
-                  <img src="image2.jpg" alt="Image 2">
-                  <img src="image3.jpg" alt="Image 3">
-                </div>
-                <div class="carouselControls">
-                    <button class="prev-slide">&lt;</button>
-                    <button class="next-slide">&gt;</button>
-                  </div>
-                
-                <div class="carouselDots">
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                  </div>
-                </div>
-                      </div>
+        </div>
     </section>
     <section class="faqs">
         <div class="container">
@@ -333,71 +379,6 @@ modeIcon.addEventListener('click', function(){
   }
 });
 </script>
-<script>
-    const carouselSlide = document.querySelector('.carouselSlide');
-const carouselImages = document.querySelectorAll('.carouselSlide img');
-const dots = document.querySelectorAll('.dot');
-const prevButton = document.querySelector('.prev-slide');
-const nextButton = document.querySelector('.next-slide');
 
-let counter = 1;
-const slideWidth = carouselImages[0].clientWidth;
-
-carouselSlide.style.transform = `translateX(${-slideWidth * counter}px)`;
-
-dots.forEach((dot, index) => {
-  dot.addEventListener('click', () => {
-    carouselSlide.style.transition = 'transform 0.4s ease-in-out';
-    counter = index + 1;
-    carouselSlide.style.transform = `translateX(${-slideWidth * counter}px)`;
-    updateDots();
-  });
-});
-
-nextButton.addEventListener('click', () => {
-  if (counter >= carouselImages.length - 1) return;
-  carouselSlide.style.transition = 'transform 0.4s ease-in-out';
-  counter++;
-  carouselSlide.style.transform = `translateX(${-slideWidth * counter}px)`;
-  updateDots();
-});
-
-prevButton.addEventListener('click', () => {
-  if (counter <= 0) return;
-  carouselSlide.style.transition = 'transform 0.4s ease-in-out';
-  counter--;
-  carouselSlide.style.transform = `translateX(${-slideWidth * counter}px)`;
-  updateDots();
-});
-
-function updateDots() {
-  dots.forEach((dot, index) => {
-    if (index === counter) {
-      dot.classList.add('active');
-    } else {
-      dot.classList.remove('active');
-    }
-  });
-}
-
-function checkImagePosition() {
-  if (carouselImages[counter].id === 'last-clone') {
-    carouselSlide.style.transition = 'none';
-    counter = carouselImages.length - 2;
-    carouselSlide.style.transform = `translateX(${-slideWidth * counter}px)`;
-    updateDots();
-  }
-
-  if (carouselImages[counter].id === 'first-clone') {
-    carouselSlide.style.transition = 'none';
-    counter = carouselImages.length - counter;
-    carouselSlide.style.transform = `translateX(${-slideWidth * counter}px)`;
-    updateDots();
-  }
-}
-
-carouselSlide.addEventListener('transitionend', checkImagePosition);
-
-</script>
 </body>
 </html>

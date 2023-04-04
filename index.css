@@ -103,16 +103,16 @@ h1{
     border-radius: .8rem;
 
 }
-.heroBtns, .communityBtn, .blogBtn{
+.heroBtns, .communityBtn{
     display: flex;
     gap: 2rem;
     margin-top: 5rem
 }
 .heroBtn, .communityBtn, .blogBtn{
-    padding: 1.5rem 4rem;
+    padding: 1rem 4rem;
     border-radius: .8rem;
     font-weight: bold;
-    font-size: 1.4rem;
+    font-size: 2rem;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -148,85 +148,102 @@ h1{
     display: flex;
     flex-direction: column;
     height: 50rem;
-
 }
-
 .blog .container{
-    
     background-color: rgba(217,200,141, .5);
-
 }
-.carouselContainer {
-    position: relative;
-    margin: 0 auto;
-    width: 50%;
-    height: auto;
-    overflow: hidden;
-  }
-  
-  .carouselSlide {
+.blogWriting p{
+    padding: 3rem 0rem;
+}
+.blogCards{
     display: flex;
-    width: 300%;
-    height: 100%;
-    background-color: transparent;
+    flex-wrap: wrap;
+    flex-direction: column;
+    overflow-x: scroll;
+    gap: 3rem;
+    height: 30rem;
+    width: 50%;
+    padding-bottom: 1rem;
+    scrollbar-width: thin;
+    scrollbar-color: #918A88 transparent;
 }
 
-.carouselSlide img {
-    width: calc(100% / 3);
-    height: 100%;
-    background-color: #D9C88D;
-    object-fit: cover;
-    border-radius: 3rem;
-  }
-  .carouselControls {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+.blogCards::-webkit-scrollbar {
+    width: 8px;
+    height: .4rem;
+}
+
+.blogCards::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.blogCards::-webkit-scrollbar-thumb {
+    background-color: whitesmoke;
+    border-radius: 20px;
+}
+
+.blogCards::-webkit-scrollbar-thumb:hover {
+    background-color: gray;
+}
+
+.blogCards .blogCard{
     width: 100%;
+    height: 30rem;
+    border: 1px solid white;
+    color: #1B1918;
+    border-radius: .8rem;
+    background-color: #E6E5E5;
     display: flex;
     justify-content: space-between;
-    padding: 0rem 2rem;
 
-  }
-  
-  .carouselControls button {
-    background-color: rgba(255,255,255, .5);
-    border-radius: 3rem;
-    height: 3rem;
-    width: 3rem;
+}
+.blogCards .blogCard:hover{
+    scale: 1.01;
+    border-radius: .8rem;
+
+}
+.blogCard img{
+    background-color: #918A88;
+    width: 100%;
+    height: 60%;
+    border-top-left-radius: .8rem;
+    border-top-right-radius: .8rem;
+
+}
+.blogCard .briefDetails{
+    padding: 1.5rem 2rem;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    border: none;
-    cursor: pointer;
-    font-size: 24px;
-  }
-  
-  .carouselDots {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between
+}
+.blogCard h5{
+    background-color: #1B1918;
+    width: fit-content;
+    color: #918A88;
+    font-size: 1.4rem;
+    padding: .6rem 2rem;
+    border-radius: 1rem;
+}
+.blogCard h4{
+    font-size:2rem;
+}
+.author-date{
     display: flex;
-  }
-  
-  .carouselDots .dot {
-    background-color: #bbb;
-    border-radius: 50%;
-    cursor: pointer;
-    margin: 0 10px;
-    width: 10px;
-    height: 10px;
-  }
-  
-  .carouselDots .active {
-    background-color: #fff;
-  }  .cards{
+    justify-content: space-between;
+    font-size: 1.6rem;
+    font-weight: lighter;
+    color: #9D9795;
+}
+ .cards{
     display: flex;
     flex-wrap: wrap;
     gap: 3rem;
     margin-top: 10rem;
 
+}
+p.description{
+    font-size: 1.6rem;
 }
 .card{
     width: 30%;
@@ -249,8 +266,6 @@ h1{
 .card:hover{
     scale: 1.05;
     transition: all ease-in-out .5s;
-
-
 }
 
 .faqsWriting{
@@ -369,6 +384,7 @@ footer p{
     }
     .heroBtn, .communityBtn, .blogBtn{
         padding: 1rem 3rem;
+        font-size: 1.5rem;
     }
     .searchIcon{
         display: none;
@@ -386,12 +402,16 @@ footer p{
         height: auto ;
         padding: 2rem 0rem;
     }
-    .carouselSlide {
-        height: 30rem;
-    }
-    .carouselContainer{
+    .blogCards{
         width: 100%;
     }
+    .blogCard h5{
+        font-size: 1.2rem;
+    }
+    .blogCard h4{
+        font-size:1.7rem;
+    }
+
     .faq .container{
         display: flex;
         align-items: center;
@@ -428,4 +448,10 @@ footer p{
     
     
 
+}
+@media (max-width: 1470px) and (min-width:  959.95px){
+    .card{
+        width: 45%;
+    }    
+    
 }
